@@ -12,4 +12,4 @@ if [ "$1" == "zookeeper&kafa" ]
 fi
 
 echo "ERROR Nothing to do. $0"
-exit 1
+exit 2
