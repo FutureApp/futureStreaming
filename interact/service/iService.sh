@@ -27,7 +27,7 @@ fi
 
 if [ "$1" == "build all images" ]
 	then 
-	docker build -t futureapplications/streaming-basis ../image/basis/. 
+	docker build -t futureapplications/streaming-basis ../images/basis/. 
 	docker build -t futureapplications/streaming-spark2.0-master ../images/spark2.0/master/.
 	docker build -t futureapplications/streaming-spark2.0-worker ../images/spark2.0/worker/.
 	docker build -t futureapplications/streaming-kafka ../images/kafka/.
