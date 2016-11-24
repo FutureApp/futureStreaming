@@ -1,7 +1,7 @@
 LBlue='\033[1;34m'
 NC='\033[0m' # No Color
 iHome="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd iHome
+cd $iHome
 
 if [ "$1" == "start eco-services" ]
 	then 	
@@ -14,7 +14,6 @@ if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $
 	then 	
 	if [ $2 == "v2.0" ]
 		then
-		serviceModules
 		bash ./serviceModules/sparkVersionV2.0.sh $3 $4
 		exit 0
 	fi

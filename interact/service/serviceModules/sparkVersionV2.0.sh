@@ -26,7 +26,7 @@ if [ -z != $1 ] && [ -z != $2  ]
 
  		while [ "$x" -le "$2"  ]
  		do
-		  docker run -d --name "spark2.0-worker-${x}" -h  "spark2.0-worker-${x}" -v /media/sf_VM_Dev/test-results-docker:/usr/local/test -m 512M --memory-swap 0M futureapplications/streaming-spark2.0/-worker 
+		  docker run -d --name "spark2.0-worker-${x}" -h  "spark2.0-worker-${x}" -v /media/sf_VM_Dev/test-results-docker:/usr/local/test -m 512M --memory-swap 0M futureapplications/streaming-spark2.0-worker 
 		ipadressOfMaster=$(  docker inspect --format '{{ .NetworkSettings.IPAddress }}'  spark2.0-master)
 		sleep 5
 		  docker exec "spark2.0-worker-${x}" usr/local/spark/sbin/start-slave.sh spark://"${ipadressOfMaster}":7077

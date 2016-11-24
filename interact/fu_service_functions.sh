@@ -1,11 +1,13 @@
 LBlue='\033[1;34m'
 NC='\033[0m' # No Color
 iHome="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo
+echo "cd to " $iHome
 cd $iHome
 
 if [ "$1" == "start eco-services" ]
 	then 	
-		printf "${LBlue}Try to start the eco-system."
+		printf "${LBlue}Try to start the eco-system.${NC}"
 		bash ./service/iService.sh "start eco-services"
 		exit
 fi
@@ -14,7 +16,7 @@ if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $
 	then 	
 	if [ "$2" == "v2.0" ]
 		then
-		printf "${LBlue}Try to run spark-cluster with spark core $2,$3 master/s and $4 worker/s"
+		printf "${LBlue}Try to run spark-cluster with spark core $1; $3 master/s and $4 worker/s${NC}"
 		bash ./service/iService.sh "$1" $2 $3 $4
 		exit 0
 	fi  
