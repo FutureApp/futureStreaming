@@ -27,11 +27,11 @@ fi
 
 if [ "$1" == "build all images" ]
 	then 
-	docker build -t futureapplications/streaming-basis ../images/basis/. 
-	docker build -t futureapplications/streaming-spark2.0-master ../images/spark2.0/master/.
-	docker build -t futureapplications/streaming-spark2.0-worker ../images/spark2.0/worker/.
-	docker build -t futureapplications/streaming-kafka ../images/kafka/.
-	docker build -t futureapplications/streaming-zookeeper ../images/zookeeper/.
+	docker build -t futureapplications/streaming-basis ../../images/basis/. 
+	docker build -t futureapplications/streaming-spark2.0-master ../../images/spark2.0/master/.
+	docker build -t futureapplications/streaming-spark2.0-worker ../../images/spark2.0/worker/.
+	docker build -t futureapplications/streaming-kafka ../../images/kafka/.
+	docker build -t futureapplications/streaming-zookeeper ../../images/zookeeper/.
 	exit 0
 fi
 
