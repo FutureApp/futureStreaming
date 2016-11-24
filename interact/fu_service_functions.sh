@@ -8,7 +8,6 @@ if [ "$1" == "start eco-services" ]
 		bash ../serviceInteraction/services.sh "start eco-services"
 		exit 0 
 fi
-
 if [ "$1" == "run sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $4  ]
 	then 	
 	if [ "$2" == "2.0" ]
@@ -16,6 +15,5 @@ if [ "$1" == "run sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $4 
 		bash ./sparkModules/sparkVersionV2.sh $3 $4
 		exit 0  
 fi
-
 echo "ERROR Nothing to do. $0"
 exit 2
