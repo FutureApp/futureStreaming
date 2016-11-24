@@ -11,7 +11,7 @@ if [ "$1" == "run kafka" ]
     
     
     # Get the current real host ID. Case: virtual machine
-    echo $(ipconfig | grep 192.168.1 | awk '{print $2}') >ip
+    echo $(ifconfig | grep 192.168.1 | awk '{print $2}') >ip
     sed -i "s/Adresse://" ip
     sed -i "s/addr://" ip
     hostRealAdress=$(cat ip)	
