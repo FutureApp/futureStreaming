@@ -41,6 +41,6 @@ if [ "$1" == "kill all container" ]
 	docker rm `docker ps -aq`
 	exit
 fi
-echo "ERROR Nothing to do. $0"
+echo "ERROR Nothing to do. <$0>"
 exit 2
 
