@@ -9,7 +9,7 @@ RUN echo "root:root" | chpasswd
 ##zookeeper-3.4.8 Installation
 ###Download:
 RUN mkdir ~/downloads && cd ~/downloads && \
-    wget -q -O - http://apache.lauf-forum.at/zookeeper/stable/zookeeper-3.4.8.tar.gz| tar -zxvf - -C /usr/local/
+    wget -q -O - http://apache.lauf-forum.at/zookeeper/stable/zookeeper-3.4.9.tar.gz | tar -zxvf - -C /usr/local/
 
 RUN cd /usr/local && ln -s ./zookeeper-3.4.8 zookeeper 
 
