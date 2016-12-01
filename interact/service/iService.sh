@@ -27,7 +27,7 @@ fi
 
 if [ "$1" == "build image" ] && [ -z != $2 ]
 	then 
-	docker build -t futureapplications/streaming-$2 ../../images/$2/.
+	docker build -t futureapplications/streaming-${2}../../images/${2}/.
 	exit 0
 fi
 if [ "$1" == "build all images" ]
