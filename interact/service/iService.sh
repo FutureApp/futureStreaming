@@ -25,6 +25,11 @@ if [ "$1" == "print IPs" ]
 		exit 0
 fi
 
+if [ "$1" == "build image" ] && [ -z != $2 ]
+	then 
+	docker build -t futureapplications/streaming-$2 ../../images/$2/.
+	exit 0
+fi
 if [ "$1" == "build all images" ]
 	then 
 	docker build -t futureapplications/streaming-basis ../../images/basis/. 
@@ -32,6 +37,7 @@ if [ "$1" == "build all images" ]
 	docker build -t futureapplications/streaming-spark2.0-worker ../../images/spark2.0/worker/.
 	docker build -t futureapplications/streaming-kafka ../../images/kafka/.
 	docker build -t futureapplications/streaming-zookeeper ../../images/zookeeper/.
+	docker build -t futureapplications/streaming-mongo ../../images/mongo/.
 	exit 0
 fi
 

@@ -28,6 +28,12 @@ if [ "$1" == "build all images" ]
 	exit 0
 fi
 
+if [ "$1" == "build image" ] && [ -z != $2 ]
+	then 
+	bash ./service/iService.sh "build image" $2
+	exit 0
+fi
+
 if [ "$1" == "kill all container" ]
 	then
 	bash ./service/iService.sh "$1"
