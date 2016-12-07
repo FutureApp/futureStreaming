@@ -1,8 +1,6 @@
 LBlue='\033[1;34m'
 NC='\033[0m' # No Color
 iHome="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-echo
-echo "cd to " $iHome
 cd $iHome
 
 if [ "$1" == "start eco-services" ]
