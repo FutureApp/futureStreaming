@@ -33,7 +33,7 @@ if [ "$1" == "build image" ] && [ -z != $2 ]
 fi
 if [ "$1" == "build all images" ]
 	then 
-	docker build -t futureapplications/spark-compose-2.0 ../../../images/spark2.0-compose/.
+	docker build -t futureapplications/spark-compose-2.0 ../../images/spark2.0-compose/.
 	docker build -t futureapplications/streaming-basis ../../images/basis/. 
 	docker build -t futureapplications/streaming-spark2.0-master ../../images/spark2.0/master/.
 	docker build -t futureapplications/streaming-spark2.0-worker ../../images/spark2.0/worker/.
