@@ -8,7 +8,7 @@ if [ "$1" == "start eco-services" ]
 		printf "${LBlue}Try to start the eco-system.${NC}"
 		bash ./service/iService.sh "start eco-services"
 		echo "INFO - Starting eco-system - Finished!"
-		exit
+		exit 0
 fi
 
 if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $4  ]
@@ -41,7 +41,7 @@ if [ "$1" == "kill all container" ]
 	then
 	bash ./service/iService.sh "$1"
 	echo "INFO - Shutdown all Container - Finished "
-	exit
+	exit 0
 fi
 
 echo
