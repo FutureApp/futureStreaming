@@ -22,10 +22,9 @@ if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $
 	fi  
 fi
 
-if [ "$1" == "start spark-compose" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $4 ] 
+if [ "$1" == "start spark-compose" ]  
 	then
-	printf "${LBlue}Try to run spark-cluster with spark core $1; $3 master/s and $4 worker/s${NC} with docker-compose"
-	bash ./service/iService.sh $1 $2 $3 $4
+	bash ./service/iService.sh $1
 	echo "INFO - Starting spark-cluster v2.0  with docker compose - Finished"
 	exit 0
 fi
