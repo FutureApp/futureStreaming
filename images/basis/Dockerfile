@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 MAINTAINER Michael Czaja
-RUN apt-get update; apt-get install -y unzip openjdk-7-jre-headless wget netcat supervisor docker.io openssh-server nano gedit openssh-client
+RUN apt-get update; apt-get install -y unzip openjdk-7-jre-headless wget netcat supervisor docker.io openssh-server nano gedit openssh-client curl
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
 RUN echo 'root:root' | chpasswd
 

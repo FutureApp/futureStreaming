@@ -2,11 +2,6 @@ FROM futureapplications/streaming-basis
 MAINTAINER Getty Images "https://github.com/gettyimages"
 
 RUN apt-get update 
-# Users with other locales should set this in their derivative image
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
-
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0
 ENV PYTHONIOENCODING UTF-8
