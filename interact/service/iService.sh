@@ -20,7 +20,7 @@ if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $
 	exit 0 
 fi
 
-if [ "$1" == "start spark-compose" ] 
+if [ "$1" == "start spark-compose" ]
 	then
 	bash ./serviceModules/sparkVersionV2-compose.sh 
 	exit 0

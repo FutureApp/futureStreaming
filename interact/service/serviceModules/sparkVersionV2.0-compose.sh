@@ -4,5 +4,5 @@ iHome="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $iHome
 
 cd ../../../images/spark2.0-Compose/
-docker-comopse up
+docker-compose up
 
