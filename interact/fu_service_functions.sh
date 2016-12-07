@@ -7,6 +7,7 @@ if [ "$1" == "start eco-services" ]
 	then 	
 		printf "${LBlue}Try to start the eco-system.${NC}"
 		bash ./service/iService.sh "start eco-services"
+		echo "INFO - Starting eco-system - Finish!"
 		exit
 fi
 
