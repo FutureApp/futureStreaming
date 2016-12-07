@@ -22,6 +22,14 @@ if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $
 	fi  
 fi
 
+if [ "$1" == "start spark-compose" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $4 ] 
+	then
+	printf "${LBlue}Try to run spark-cluster with spark core $1; $3 master/s and $4 worker/s${NC} with docker-compose"
+	bash ./service/iService.sh $1 $2 $3 $4
+	echo "INFO - Starting spark-cluster v2.0  with docker compose - Finished"
+	exit 0
+fi
+
 if [ "$1" == "build all images" ]
 	then 
 	bash ./service/iService.sh "build all images"
@@ -43,6 +51,7 @@ if [ "$1" == "kill all container" ]
 	echo "INFO - Shutdown all Container - Finished "
 	exit 0
 fi
+
 
 echo
 echo "ERROR $0"

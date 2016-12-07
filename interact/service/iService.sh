@@ -19,11 +19,13 @@ if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $
 	fi
 	exit 0 
 fi
-if [ "$1" == "print IPs" ]
-	then 	
-		bash ./serviceModules/printIPAddresses.sh "zookeeper&kafka"
-		exit 0
+
+if [ "$1" == "start spark-compose" ] 
+	then
+	bash ./serviceModules/sparkVersionV2-compose.sh 
+	exit 0
 fi
+
 
 if [ "$1" == "build image" ] && [ -z != $2 ]
 	then 
