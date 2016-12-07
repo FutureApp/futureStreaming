@@ -1,7 +1,7 @@
 master:
   image: futureapplications/spark-compose-2.0
   command: bin/spark-class org.apache.spark.deploy.master.Master -h master
-  hostname: master
+  hostname: 172.16.224.192
   environment:
     MASTER: spark://172.16.224.192:7077
     SPARK_CONF_DIR: /conf
@@ -26,15 +26,15 @@ master:
 
 worker:
   image: futureapplications/spark-compose-2.0
-  command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
-  hostname: 172.16.224.192
+  command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://172.16.224.192:7077
+  hostname: worker-1
   environment:
     SPARK_CONF_DIR: /conf
     SPARK_WORKER_CORES: 2
     SPARK_WORKER_MEMORY: 1g
     SPARK_WORKER_PORT: 8881
     SPARK_WORKER_WEBUI_PORT: 8081
-    SPARK_PUBLIC_DNS: 172.16.224.192
+    SPARK_PUBLIC_DNS: localhost
   links:
     - master
   expose:
