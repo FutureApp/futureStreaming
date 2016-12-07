@@ -24,7 +24,7 @@ fi
 
 if [ "$1" == "build all images" ]
 	then 
-	bash ./service/iService.sh "build all images"
+	i = "${bash ./service/iService.sh "build all images"}"
 	echo "INFO - Building all images - Finished!"
 	exit 0
 fi
