@@ -32,12 +32,14 @@ fi
 if [ "$1" == "build image" ] && [ -z != $2 ]
 	then 
 	bash ./service/iService.sh "build image" $2
+	echo "INFO - Building image $2 - Finished"
 	exit 0
 fi
 
 if [ "$1" == "kill all container" ]
 	then
 	bash ./service/iService.sh "$1"
+	echo "INFO - Shutdown all Container - Finished "
 	exit
 fi
 
