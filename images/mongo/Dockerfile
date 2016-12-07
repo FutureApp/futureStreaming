@@ -2,10 +2,10 @@ FROM futureapplications/streaming-basis
 MAINTAINER Michael Czaja
 
 
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' |  tee /etc/apt/sources.list.d/mongodb.list
+RUN echo 'y' | sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+RUN echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 RUN echo 'y' | apt-get update
-RUN echo 'y' | apt-get install mongodb-10gen = 2.2.3
+RUN apt-get install -y mongodb-org
 RUN service mongodb start
 
 CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
