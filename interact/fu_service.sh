@@ -10,7 +10,7 @@ fi
 
 if [ "$1" == "start spark-compose" ]
 	then
-	bash ./fu_service_functions.sh $1
+	bash ./fu_service_functions.sh "$1"
 	exit 0
 fi
 
