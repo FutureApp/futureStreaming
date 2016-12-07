@@ -2,8 +2,6 @@ FROM futureapplications/streaming-basis
 MAINTAINER Getty Images "https://github.com/gettyimages"
 
 RUN apt-get update 
-RUN apt-get install -y dpkg-reconfigure -f noninteractive locales && apt-get clean && rm -rf /var/lib/apt/lists/*
-
 # Users with other locales should set this in their derivative image
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
