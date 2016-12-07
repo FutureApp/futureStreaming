@@ -24,6 +24,7 @@ fi
 
 if [ "$1" == "start spark-compose" ]  
 	then
+	echo "INFO - Starting spark cluster with docker comopse"
 	bash ./service/iService.sh $1
 	echo "INFO - Starting spark-cluster v2.0  with docker compose - Finished"
 	exit 0
