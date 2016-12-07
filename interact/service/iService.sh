@@ -38,7 +38,7 @@ if [ "$1" == "build all images" ]
 	docker build -t futureapplications/streaming-spark2.0-worker ../../images/spark2.0/worker/.
 	docker build -t futureapplications/streaming-kafka ../../images/kafka/.
 	docker build -t futureapplications/streaming-zookeeper ../../images/zookeeper/.
-	docker build -t futureapplications/streaming-mongo ../../images/mongo/.
+	#docker build -t futureapplications/streaming-mongo ../../images/mongo/.
 	docker build -t futureapplications/spark-compose-2.0 ../../../images/spark2.0-compose/.
 	exit 0
 fi
