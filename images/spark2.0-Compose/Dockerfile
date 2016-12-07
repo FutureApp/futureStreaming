@@ -1,15 +1,15 @@
 FROM futureapplications/streaming-basis
 MAINTAINER Getty Images "https://github.com/gettyimages"
 
-RUN apt-get update \
- && apt-get install -y locales \
- && dpkg-reconfigure -f noninteractive locales \
- && locale-gen C.UTF-8 \
- && /usr/sbin/update-locale LANG=C.UTF-8 \
- && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
- && locale-gen \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+RUN apt-get update 
+RUN apt-get install -y locales 
+RUN dpkg-reconfigure -f noninteractive locales 
+RUN locale-gen C.UTF-8 
+RUN /usr/sbin/update-locale LANG=C.UTF-8 
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen 
+RUN locale-gen 
+RUN apt-get clean 
+RUN rm -rf /var/lib/apt/lists/*
 
 # Users with other locales should set this in their derivative image
 ENV LANG en_US.UTF-8
