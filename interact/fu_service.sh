@@ -8,7 +8,7 @@ if [ "$1" == "start sparkCluster" ] && [ -z != $2 ] && [ -z != $3 ] && [ -z != $
 	exit 0
 fi
 
-if [ "$1" == "start spark-compose" ]  
+if [ "$1" == "start spark-compose" ]
 	then
 	bash ./fu_service_functions.sh $1
 	exit 0
