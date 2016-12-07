@@ -8,8 +8,8 @@ echo "y" | sudo apt-get update
 echo "y" | sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
 echo "y" | sudo apt-get update
 echo "y" | sudo apt-get install docker-engine
-echo "y" | sudo service docker start
-sudo usermod -aG docker $USER
+echo "y" | sudo service docker startUSER
+sudo usermod -aG docker $(whoami)
 
 #Verifiyes if docker is installed! Optional
 #echo "y" | sudo docker run hello-world
