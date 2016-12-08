@@ -7,7 +7,7 @@ cd $iHome
 if [ "$1" == "mongo" ]
 	then
     bash ./fu_service_functions.sh "kill all container"
-	sudo docker build -t futureapplications/streaming-mongo ../images/mongo/.
+	docker build -t futureapplications/streaming-mongo ../images/mongo/.
     docker run -d -p 8080:8080 --name "mongo" -h  "mongo"  futureapplications/streaming-mongo
 	exit 0
 fi
