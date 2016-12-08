@@ -32,8 +32,8 @@ worker:
     SPARK_CONF_DIR: /conf
     SPARK_WORKER_CORES: 2
     SPARK_WORKER_MEMORY: 1g
-    SPARK_WORKER_PORT: 8881
-    SPARK_WORKER_WEBUI_PORT: 8081
+    SPARK_WORKER_PORT: 8080
+    SPARK_WORKER_WEBUI_PORT: 8080
     SPARK_PUBLIC_DNS: localhost
   links:
     - master
@@ -45,7 +45,7 @@ worker:
     - 7016
     - 8881
   ports:
-    - 8080:8081
+    - 8080:8080
   volumes:
     - ./conf/worker:/conf
     - ./data:/tmp/data
