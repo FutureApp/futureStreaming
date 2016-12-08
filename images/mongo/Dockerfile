@@ -6,9 +6,5 @@ RUN echo 'y' | sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv
 RUN echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 RUN echo 'y' | apt-get update
 RUN apt-get install -y mongodb-org
-RUN service mongodb start
-RUN rm /var/lib/mongodb/mongod.lock
-RUN mongod --repair
-
 
 CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
