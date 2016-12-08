@@ -7,4 +7,8 @@ RUN echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-or
 RUN echo 'y' | apt-get update
 RUN apt-get install -y mongodb-org
 
+ADD default.ini /etc/mongod.conf
+
+EXPOSE 27017
+
 CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
