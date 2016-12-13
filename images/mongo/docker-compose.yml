@@ -1,0 +1,11 @@
+master:
+  image: futureapplications/mongodbV3.0
+  hostname: mongodb
+  environment:
+    
+    SPARK_CONF_DIR: /usr/bin/mongod
+  expose:
+    - 27017
+  ports:
+    - 27017:27017
+

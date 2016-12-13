@@ -10,4 +10,3 @@ RUN mkdir -p /data/db
 EXPOSE 27017
 
 ENTRYPOINT ["/usr/bin/mongod"]
-CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
