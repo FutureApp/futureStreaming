@@ -9,6 +9,6 @@ if [ "$1" == "mongo" ]
 	docker build -t futureapplications/mongodb-v3 ../images/mongo/.
 	cd ../images/mongo
     docker-compose up
-	cd iHome
+	cd $iHome
 	exit 0
 fi
