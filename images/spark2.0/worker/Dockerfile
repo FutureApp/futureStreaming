@@ -28,7 +28,7 @@ ENV PATH $PATH:$SPARK_HOME/bin
 ENV PATH $PATH:$SCALA_HOME/bin
 
 EXPOSE
-
+ 
 CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
 
 
